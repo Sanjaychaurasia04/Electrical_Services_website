@@ -1,0 +1,29 @@
+.hero-section {
+  background: var(--blue);
+  color: #fff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  background: var(--gold);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-btns .btn {
+  margin-right: 1rem;
+}

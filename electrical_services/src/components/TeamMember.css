@@ -1,0 +1,54 @@
+.team-member {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+}
+
+.member-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #1a237e;
+  margin-bottom: 16px;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 4px;
+}
+
+.member-position {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.member-bio {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Responsive layout (if used in a grid) */
+@media screen and (max-width: 600px) {
+  .team-member {
+    max-width: 90%;
+  }
+
+  .member-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
