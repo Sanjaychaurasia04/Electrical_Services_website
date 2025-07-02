@@ -5,7 +5,8 @@ A professional and user-friendly website for promoting and booking electrical se
 ---
 ## 🌐 Live Demo
 
-🔗 [View the Live Site on Netlify](https://electrical-services-provider.netlify.app/services)
+🔗 [View the Live Site on Netlify](https://electrical-services-provider.netlify.app/)
+https://electrical-services-provider.netlify.app/
 
 ---
 
