@@ -1,29 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import TeamMember from '../components/TeamMember';
+import wiring from '../assets/wiring.webp';
 import './About.css';
 const About = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'John Smith',
+      name: 'Ramjit Chaurasia',
       position: 'Master Electrician',
-      bio: 'With over 25 years of experience, John specializes in commercial electrical systems and complex installations.',
-      image: '/images/team1.jpg'
+      bio: 'With over 25 years of experience, Ramjit specializes in commercial electrical systems and complex installations.',
+      image: wiring
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
+      name: 'Markanday',
       position: 'Residential Electrician',
-      bio: 'Sarah has been with our team for 15 years, focusing on home wiring, renovations, and smart home installations.',
-      image: '/images/team2.jpg'
+      bio: 'Markanday has been with our team for 15 years, focusing on home wiring, renovations, and smart home installations.',
+      image: wiring
     },
     {
       id: 3,
-      name: 'Mike Williams',
+      name: 'Santram',
       position: 'Electrical Engineer',
-      bio: 'Mike handles our most technical projects including industrial systems and energy efficiency solutions.',
-      image: '/images/team3.jpg'
+      bio: 'Santram handles our most technical projects including industrial systems and energy efficiency solutions.',
+      image: wiring
     }
   ];
 

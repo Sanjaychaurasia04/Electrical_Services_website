@@ -155,8 +155,8 @@ const Contact = () => {
 
               <div className="info-item">
                 <h4>Phone</h4>
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
-                <p>Emergency: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                <a href="tel:+919711117051">+1 (234) 567-890</a>
+                <p>Emergency: <a href="tel:+919711117051">+1 (234) 567-891</a></p>
               </div>
 
               <div className="info-item">
@@ -166,9 +166,9 @@ const Contact = () => {
 
               <div className="info-item">
                 <h4>Business Hours</h4>
-                <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
-                <p>Sat: 9:00 AM – 4:00 PM</p>
-                <p>Sun: Emergency Only</p>
+                <p>Monday–Sunday: 9:00 AM – 8:00 PM</p>
+                {/* <p>Sat: 9:00 AM – 4:00 PM</p>
+                <p>Sun: Emergency Only</p> */}
               </div>
 
               <div className="map-container">
