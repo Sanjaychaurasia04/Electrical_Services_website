@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ServiceDetails.css'; // Import the CSS
+import './ServiceDetails.css';
+
+const DEFAULT_DETAILS = [
+  'Professional certified electricians',
+  'Quality materials and equipment',
+  'Safety compliance guarantee',
+  'Clean work environment',
+];
 
 const ServiceDetails = ({ service }) => {
+  if (!service) {
+    return <div className="service-error">Service not found</div>;
+  }
+
   return (
     <section className="service-details" id={service.id}>
       <div className="service-header">
-        <div className="service-icon">
-          <img
-            src={service.icon}
-            alt={`${service.title} icon`}
-            loading="lazy"
-          />
-        </div>
         <h2 className="service-title">{service.title}</h2>
       </div>
 
@@ -22,6 +26,10 @@ const ServiceDetails = ({ service }) => {
             src={service.image}
             alt={`${service.title} visual`}
             loading="lazy"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = '/default-service-image.jpg';
+            }}
           />
         </div>
 
@@ -30,8 +38,10 @@ const ServiceDetails = ({ service }) => {
 
           <h3 className="features-heading">Service Includes:</h3>
           <ul className="service-features">
-            {service.details.map((detail, index) => (
-              <li key={index}>{detail}</li>
+            {(service.details || DEFAULT_DETAILS).map((detail, index) => (
+              <li key={index} className="service-feature">
+                {detail}
+              </li>
             ))}
           </ul>
 
@@ -40,12 +50,11 @@ const ServiceDetails = ({ service }) => {
               to="/book-service"
               state={{ service: service.title }}
               className="btn btn-primary"
-              aria-label={`Book ${service.title} service`}
             >
               Book This Service
             </Link>
             <a href="tel:+919711117051" className="btn btn-secondary">
-              Call for Inquiry
+              Call Now
             </a>
           </div>
         </div>
