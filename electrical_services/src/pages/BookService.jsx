@@ -69,7 +69,7 @@ const BookService = () => {
         <div className="container">
           <div className="booking-container">
             {/* FORM SIDE */}
-            <div className="booking-form">
+            {/* <div className="booking-form">
               <h2>Book a Service</h2>
               <p>Fill out the form below to schedule an appointment with our electrical experts.</p>
 
@@ -166,7 +166,7 @@ const BookService = () => {
                   {isSubmitting ? 'Booking...' : 'Book Service'}
                 </button>
               </form>
-            </div>
+            </div> */}
 
             {/* INFO SIDE */}
             <div className="booking-info">
@@ -181,8 +181,8 @@ const BookService = () => {
 
               <div className="emergency-contact">
                 <h4>For Emergency Services:</h4>
-                <a href="tel:+1234567890" className="emergency-phone">
-                  Call: +1 (234) 567-890
+                <a href="tel:+919711117051" className="emergency-phone">
+                  Call: +91 97111 7051
                 </a>
                 <p>Available 24/7 for urgent electrical issues</p>
               </div>

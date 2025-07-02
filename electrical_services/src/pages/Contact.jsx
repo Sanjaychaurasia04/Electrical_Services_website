@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="container">
           <div className="contact-wrapper">
             {/* Form Section */}
-            <div className="contact-form">
+            {/* <div className="contact-form">
               <h2>Contact Us</h2>
               <p>Have questions or need electrical services? Fill out the form below and we'll get back to you promptly.</p>
 
@@ -142,15 +142,15 @@ const Contact = () => {
                   {isSending ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
-            </div>
+            </div> */}
 
-            {/* Info Section */}
+            
             <div className="contact-info">
               <h3>Get in Touch</h3>
 
               <div className="info-item">
                 <h4>Address</h4>
-                <p>123 Electric Ave, City, State 12345</p>
+                <p>Gali no .2 JantaVihar, Mukandpur  Delhi </p>
               </div>
 
               <div className="info-item">
@@ -173,7 +173,7 @@ const Contact = () => {
               <div className="map-container">
                 <iframe
                   title="Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179041!2d-73.9878449245252!3d40.74844047138953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1690834257825!5m2!1sen!2sus"
+                  src="https://maps.app.goo.gl/3A9T3rhfhTc881W77"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}

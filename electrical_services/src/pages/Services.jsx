@@ -1,7 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ServiceDetails from '../components/ServiceDetails';
-import './Services.css'; // Optional: create this for custom styling
+import './Services.css'; 
+
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img3.jpg';
+import img4 from '../assets/img4.jpg';
+import img5 from '../assets/img5.webp';
+import img6 from '../assets/img6.jpg';
+import img7 from '../assets/img7.jpg';
+import img8 from '../assets/img8.webp';
+import img9 from '../assets/img9.jpg';
+import img10 from '../assets/img10.jpg';
+import img11 from '../assets/img10.jpg'; // duplicated image, consider replacing
+import img16 from '../assets/img16.webp';
 
 const Services = () => {
   const allServices = [
@@ -17,7 +30,7 @@ const Services = () => {
         'Conduit and trunking installation'
       ],
       icon: '/icons/wiring.png',
-      image: '/images/wiring.jpg'
+      image: img1
     },
     {
       id: 'switch-repair',
@@ -31,7 +44,7 @@ const Services = () => {
         'Load testing'
       ],
       icon: '/icons/switch.png',
-      image: '/images/switch-repair.jpg'
+      image: img2
     },
     {
       id: 'mcb-repair',
@@ -45,7 +58,7 @@ const Services = () => {
         'Emergency repairs'
       ],
       icon: '/icons/mcb.png',
-      image: '/images/mcb-repair.jpg'
+      image: img3
     },
     {
       id: 'fault-repair',
@@ -59,7 +72,7 @@ const Services = () => {
         'Complete fault diagnosis'
       ],
       icon: '/icons/fault.png',
-      image: '/images/fault-repair.jpg'
+      image: img4
     },
     {
       id: 'power-repair',
@@ -73,7 +86,7 @@ const Services = () => {
         'Upgrades and modifications'
       ],
       icon: '/icons/power.png',
-      image: '/images/power-repair.jpg'
+      image: img5
     },
     {
       id: 'main-repair',
@@ -87,7 +100,7 @@ const Services = () => {
         'Complete board replacement'
       ],
       icon: '/icons/main-board.png',
-      image: '/images/main-repair.jpg'
+      image: img6
     },
     {
       id: 'remodeling',
@@ -101,7 +114,7 @@ const Services = () => {
         'Smart home integration'
       ],
       icon: '/icons/remodeling.png',
-      image: '/images/remodeling.jpg'
+      image: img7
     },
     {
       id: 'fan-installation',
@@ -115,7 +128,7 @@ const Services = () => {
         'Remote control integration'
       ],
       icon: '/icons/fan.png',
-      image: '/images/fan-installation.jpg'
+      image: img8
     }
   ];
 

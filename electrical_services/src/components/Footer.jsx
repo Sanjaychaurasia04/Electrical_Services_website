@@ -54,7 +54,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaMapMarkerAlt />
-                <span>123 Electric Ave, City, State 12345</span>
+                <span>Gali no. 2 JantaVihar, Mukandpur Delhi 110042 </span>
               </li>
             </ul>
           </div>

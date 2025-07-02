@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import TeamMember from '../components/TeamMember';
 import wiring from '../assets/wiring.webp';
+import img from '../assets/img6.jpg'
 import './About.css';
 const About = () => {
   const teamMembers = [
@@ -53,7 +54,7 @@ const About = () => {
               <p>We take pride in our reputation for reliability and quality. Many of our clients have been with us for years, trusting us with their electrical needs time and time again.</p>
             </div>
             <div className="story-image">
-              <img src="/images/about-story.jpg" alt="Our team at work" />
+              <img src={img} alt="Our team at work" />
             </div>
           </div>
         </div>
@@ -100,7 +101,7 @@ const About = () => {
 
       <section className="section about-team">
         <div className="container">
-          <h2 className="section-title">Meet Our Team</h2>
+          <h2 className="section-title">Meet Our Team Members</h2>
           <p className="text-center mb-5">Our licensed and certified electricians bring expertise and professionalism to every job.</p>
           <div className="team-grid">
             {teamMembers.map(member => (

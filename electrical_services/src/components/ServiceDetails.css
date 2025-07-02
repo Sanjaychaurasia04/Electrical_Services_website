@@ -1,30 +1,122 @@
-ServiceDetails.css
+/* ServiceDetails.css */
+
 .service-details {
-  max-width: 1200px;
-  margin: 2rem auto;
   padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
 }
 
 .service-body {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .service-body {
-    grid-template-columns: 1fr 1fr;
-  }
+  align-items: flex-start;
 }
 
 .service-image {
-  width: 100%;
-  border-radius: 0.5rem;
+  flex: 1 1 350px;
+  max-width: 450px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-image img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+}
+
+.service-info {
+  flex: 1 1 300px;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.features-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.service-features {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-feature {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.service-feature::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.service-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #1e7e34;
+}
+
+.service-error {
+  text-align: center;
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 2rem;
 }
