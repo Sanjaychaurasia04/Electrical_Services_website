@@ -184,6 +184,12 @@ const BookService = () => {
                 <a href="tel:+919711117051" className="emergency-phone">
                   Call: +91 97111 7051
                 </a>
+                <a
+                  href="mailto:ramjitchaurasia6@gmail.com"
+                  className="btn-secondary email-btn"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Email us at ramjitchaurasia6@gmail.com"
+                ></a>
                 <p>Available 24/7 for urgent electrical issues</p>
               </div>
             </div>

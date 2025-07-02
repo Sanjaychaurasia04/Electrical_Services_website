@@ -1,57 +1,92 @@
+/* Main Section */
 .book-service {
-  padding: 60px 20px;
+  padding: 5rem 2rem;
   background-color: #f7f7f7;
 }
 
+/* Container */
 .booking-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 3rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
-.booking-form, .booking-info {
+/* Booking Form & Info */
+.booking-form,
+.booking-info {
   flex: 1;
   min-width: 320px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .booking-form h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #1a237e;
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-top: 8px;
+.booking-form p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
   font-size: 1rem;
 }
 
-.calendar-group .react-calendar {
-  border: none;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border-radius: 8px;
-  padding: 10px;
+/* Form Inputs */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1a237e;
+  outline: none;
+}
+
+/* Calendar */
+.calendar-group .react-calendar {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Submit Button */
 .btn-primary {
-  background-color: #ffca28;
+  background-color: #fbc02d;
   color: #1a237e;
-  font-weight: bold;
-  padding: 12px 20px;
+  font-weight: 600;
+  padding: 0.75rem 1.8rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:disabled {
@@ -60,32 +95,82 @@ input, select, textarea {
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #ffc107;
+  background-color: #ffb300;
+  transform: translateY(-2px);
 }
 
+/* Booking Info */
 .booking-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
   color: #1a237e;
 }
 
 .booking-info ul {
   list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 30px;
-  color: #333;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+  line-height: 1.7;
 }
 
+/* Emergency Contact */
 .emergency-contact {
   background-color: #1a237e;
   color: white;
-  padding: 20px;
+  padding: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emergency-contact h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .emergency-phone {
-  font-size: 1.2rem;
-  color: #ffca28;
+  font-size: 1.3rem;
+  color: #fdd835;
   font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
   text-decoration: none;
+}
+
+.emergency-phone:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .booking-container {
+    flex-direction: column;
+  }
+
+  .booking-form,
+  .booking-info {
+    padding: 1.5rem;
+  }
+
+  .booking-form h2 {
+    font-size: 2rem;
+  }
+
+  .booking-info h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-service {
+    padding: 3rem 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .calendar-group .react-calendar {
+    padding: 0.5rem;
+  }
 }

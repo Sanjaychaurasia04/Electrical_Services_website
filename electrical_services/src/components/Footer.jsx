@@ -50,7 +50,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaEnvelope />
-                <a href="mailto:ramjitchaurasi6@gmail.com">ramjitchaurasi6@gmail.com</a>
+                <a href="mailto:ramjitchaurasia6@gmail.com">ramjitchaurasia6@gmail.com</a>
               </li>
               <li>
                 <FaMapMarkerAlt />

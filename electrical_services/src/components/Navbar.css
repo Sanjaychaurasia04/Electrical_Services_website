@@ -11,7 +11,7 @@
   padding: 1rem 0;
 }
 
-/* Scrolled State - When user scrolls down */
+/* Scrolled State */
 .navbar.scrolled {
   background-color: rgba(34, 49, 63, 0.98);
   padding: 0.5rem 0;
@@ -48,14 +48,14 @@
   transform: scale(1.05);
 }
 
-/* Navigation Links Container */
+/* Navigation Links */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* Individual Link Styles */
+/* Link Styles */
 .nav-links a {
   color: #ecf0f1;
   text-decoration: none;
@@ -66,18 +66,18 @@
   transition: all 0.3s ease;
 }
 
-.nav-links a:not(.call-btn)::after {
+.nav-links a:not(.call-btn):not(.email-btn)::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #f39c12;
+  background-color: #eacb98;
   transition: width 0.3s ease;
 }
 
-.nav-links a:not(.call-btn):hover::after {
+.nav-links a:not(.call-btn):not(.email-btn):hover::after {
   width: 100%;
 }
 
@@ -85,30 +85,53 @@
   color: #f39c12;
 }
 
-/* Call Button Styles */
-.call-btn {
+/* Call & Email Button Styles */
+.call-btn,
+.email-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background-color: #f39c12;
-  color: #2c3e50 !important;
-  padding: 0.6rem 1.2rem;
+  gap: 8px;
+  padding: 10px 16px;
   border-radius: 50px;
+  font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Call Button */
+.call-btn {
+  background-color: #ab792f; /* Soft amber */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(249, 168, 37, 0.3);
+  transition: background-color 0.3s, transform 0.2s ease;
 }
 
 .call-btn:hover {
-  background-color: #e67e22;
+  
+  color: #ffffff; /* Deep blue text for contrast */
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.call-btn::after {
-  display: none !important;
+/* Email Button */
+.email-btn {
+  background-color: transparent;
+  color: #1a237e;
+  border: 2px solid #1a237e;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
 }
 
-/* Mobile Toggle Button */
+.email-btn:hover {
+  background-color: #1a237e;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* Toggle Button */
 .nav-toggle {
   display: none;
   cursor: pointer;
@@ -118,10 +141,10 @@
 }
 
 .nav-toggle:hover {
-  color: #f39c12;
+  color: #e6b76a;
 }
 
-/* Mobile Menu Styles */
+/* Responsive - Tablet & Below */
 @media (max-width: 992px) {
   .nav-container {
     padding: 0 1.5rem;
@@ -158,20 +181,18 @@
     padding: 0.8rem 1.5rem;
   }
 
-  .call-btn {
+  .call-btn,
+  .email-btn {
     margin-top: 1rem;
     padding: 0.8rem 1.8rem;
     font-size: 1.2rem;
   }
 
-  /* Scrolled state adjustments for mobile */
   .navbar.scrolled {
     padding: 0.5rem 0;
   }
-}
 
-/* Animation for menu items when opening */
-@media (max-width: 992px) {
+  /* Fade-in Animation */
   .nav-links.open a {
     animation: fadeInRight 0.5s ease forwards;
   }
@@ -187,15 +208,15 @@
     }
   }
 
-  /* Delay each nav item animation */
   .nav-links.open a:nth-child(1) { animation-delay: 0.1s; }
   .nav-links.open a:nth-child(2) { animation-delay: 0.2s; }
   .nav-links.open a:nth-child(3) { animation-delay: 0.3s; }
   .nav-links.open a:nth-child(4) { animation-delay: 0.4s; }
   .nav-links.open a:nth-child(5) { animation-delay: 0.5s; }
+  .nav-links.open a:nth-child(6) { animation-delay: 0.6s; }
 }
 
-/* Small Mobile Devices */
+/* Extra Small Devices */
 @media (max-width: 480px) {
   .nav-logo {
     font-size: 1.5rem;

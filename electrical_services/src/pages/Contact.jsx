@@ -156,31 +156,18 @@ const Contact = () => {
               <div className="info-item">
                 <h4>Phone</h4>
                 <a href="tel:+919711117051">+919711117051</a>
-                <p>Emergency: <a href="tel:+919711117051">+919711117051</a></p>
+                <p>Emergency: <a href="tel:+917827694516">+917827694516</a></p>
               </div>
 
               <div className="info-item">
                 <h4>Email</h4>
-                <a href="mailto:ramjitchaurasi6@gmail.com">ramjitchaurasi6@gmail.com</a>
+                <a href="mailto:ramjitchaurasia6@gmail.com">ramjitchaurasia6@gmail.com</a>
               </div>
 
               <div className="info-item">
                 <h4>Business Hours</h4>
                 <p>Monday–Sunday: 9:00 AM – 8:00 PM</p>
                 
-              </div>
-
-              <div className="map-container">
-                <iframe
-                  title="Location Map"
-                  src="https://maps.app.goo.gl/3A9T3rhfhTc881W77"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </div>

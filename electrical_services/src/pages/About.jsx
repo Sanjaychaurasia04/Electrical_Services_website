@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import TeamMember from '../components/TeamMember';
 import wiring from '../assets/wiring.webp';
-import img from '../assets/img6.jpg'
+import img from '../assets/img6.jpg';
 import './About.css';
+
 const About = () => {
   const teamMembers = [
     {
@@ -34,7 +35,10 @@ const About = () => {
     <>
       <Helmet>
         <title>About Us | Professional Electrical Services</title>
-        <meta name="description" content="Learn about our electrical services company with 30+ years of experience. Meet our team of certified electricians dedicated to quality work and customer satisfaction." />
+        <meta
+          name="description"
+          content="Learn about our electrical services company with 30+ years of experience. Meet our team of certified electricians dedicated to quality work and customer satisfaction."
+        />
       </Helmet>
 
       <section className="section about-hero">
@@ -49,9 +53,16 @@ const About = () => {
           <div className="story-content">
             <div className="story-text">
               <h2>Our Story</h2>
-              <p>Founded in 1993, Electrical Services began as a small family business with a commitment to quality workmanship and customer satisfaction. What started as a local electrical repair service has grown into a full-service electrical contractor serving residential and commercial clients throughout the region.</p>
-              <p>Over the past three decades, we've completed over 15,000 projects, from simple outlet repairs to complex commercial installations. Our team of certified electricians brings expertise, professionalism, and a dedication to safety to every job.</p>
-              <p>We take pride in our reputation for reliability and quality. Many of our clients have been with us for years, trusting us with their electrical needs time and time again.</p>
+              <p>
+                With over <strong>30 years of experience</strong>, we started with a clear goal — to provide safe, reliable, and high-quality electrical services to homes and businesses across India.
+                What began as a small team has grown into a trusted name, completing over <strong>15,000 projects</strong> for banks, institutions, showrooms, and private residences.
+              </p>
+              <p>
+                We handle <strong>all types of electrical work</strong> — whether it’s a large-scale commercial setup, a mid-sized renovation, or a small residential repair. Every project is delivered with the same commitment to safety, quality, and professionalism.
+              </p>
+              <p>
+                Today, we proudly serve in <strong>Delhi, Noida, Gurugram, Faridabad, Jaipur</strong>, and many other cities — continuing our journey with one promise: quality work, done right.
+              </p>
             </div>
             <div className="story-image">
               <img src={img} alt="Our team at work" />
@@ -71,7 +82,7 @@ const About = () => {
               <h3>Safety First</h3>
               <p>We adhere to the highest safety standards to protect our clients, team, and property.</p>
             </div>
-            
+
             <div className="value-card">
               <div className="value-icon">
                 <img src="/icons/quality.png" alt="Quality" />
@@ -79,7 +90,7 @@ const About = () => {
               <h3>Quality Workmanship</h3>
               <p>Every job is completed to the highest standards with attention to detail.</p>
             </div>
-            
+
             <div className="value-card">
               <div className="value-icon">
                 <img src="/icons/integrity.png" alt="Integrity" />
@@ -87,7 +98,7 @@ const About = () => {
               <h3>Integrity</h3>
               <p>Honest advice and fair pricing with no hidden costs or unnecessary work.</p>
             </div>
-            
+
             <div className="value-card">
               <div className="value-icon">
                 <img src="/icons/customer-service.png" alt="Customer Service" />
@@ -102,9 +113,11 @@ const About = () => {
       <section className="section about-team">
         <div className="container">
           <h2 className="section-title">Meet Our Team Members</h2>
-          <p className="text-center mb-5">Our licensed and certified electricians bring expertise and professionalism to every job.</p>
+          <p className="text-center mb-5">
+            Our licensed and certified electricians bring expertise and professionalism to every job.
+          </p>
           <div className="team-grid">
-            {teamMembers.map(member => (
+            {teamMembers.map((member) => (
               <TeamMember key={member.id} member={member} />
             ))}
           </div>
@@ -117,7 +130,7 @@ const About = () => {
             <h2>Ready to Experience Quality Electrical Service?</h2>
             <p>Contact us today to schedule an appointment or get a free estimate.</p>
             <div className="cta-btns">
-              <a href="tel:+1234567890" className="btn btn-primary">
+              <a href="tel:+919711117051" className="btn btn-primary">
                 Call Now
               </a>
               <Link to="/contact" className="btn btn-secondary">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { FaPhoneAlt, FaBars, FaTimes, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import './Navbar.css';
 
@@ -19,11 +19,9 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Function to handle phone call initiation
   const handleCallClick = (e) => {
     e.preventDefault();
     setIsOpen(false);
-    // Fallback for devices that don't support tel: links
     if (window.innerWidth > 768) {
       window.open('tel:+919711117051', '_blank');
     } else {
@@ -55,18 +53,28 @@ const Navbar = () => {
             <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
             <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-            <a 
-              href="tel:+919711117051" 
-              className="btn-primary call-btn" 
+
+            <a
+              href="tel:+919711117051"
+              className="btn-primary call-btn"
               onClick={handleCallClick}
               aria-label="Call us at +91 97111 17051"
             >
               <FaPhoneAlt aria-hidden="true" /> Call Now
             </a>
+
+            <a
+              href="mailto:ramjitchaurasia6@gmail.com"
+              className="btn-secondary email-btn"
+              onClick={() => setIsOpen(false)}
+              aria-label="Email us at ramjitchaurasia6@gmail.com"
+            >
+              <FaEnvelope aria-hidden="true" /> Email Us
+            </a>
           </div>
 
-          <button 
-            className="nav-toggle" 
+          <button
+            className="nav-toggle"
             onClick={toggleMenu}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}

@@ -1,137 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ServiceDetails from '../components/ServiceDetails';
-import './Services.css'; 
-
-import img1 from '../assets/img1.jpg';
-import img2 from '../assets/img2.jpg';
-import img3 from '../assets/img3.jpg';
-import img4 from '../assets/img4.jpg';
-import img5 from '../assets/img5.webp';
-import img6 from '../assets/img6.jpg';
-import img7 from '../assets/img7.jpg';
-import img8 from '../assets/img8.webp';
-import img9 from '../assets/img9.jpg';
-import img10 from '../assets/img10.jpg';
-import img11 from '../assets/img10.jpg'; // duplicated image, consider replacing
-import img16 from '../assets/img16.webp';
+import { services } from '../components/servicesData'; // 👈 Importing from external data
+import './Services.css';
 
 const Services = () => {
-  const allServices = [
-    {
-      id: 'wiring',
-      title: 'Electrical Wiring',
-      description: 'We provide comprehensive electrical wiring services for both residential and commercial properties. Our expert electricians ensure safe and efficient wiring installations that meet all local codes and regulations.',
-      details: [
-        'Complete home/office wiring',
-        'Rewiring of old properties',
-        'Circuit design and implementation',
-        'Safety inspections and testing',
-        'Conduit and trunking installation'
-      ],
-      icon: '/icons/wiring.png',
-      image: img1
-    },
-    {
-      id: 'switch-repair',
-      title: 'Switch Board Repair',
-      description: 'Professional repair and maintenance of all types of switch boards. We diagnose and fix issues quickly to restore your electrical system to optimal performance.',
-      details: [
-        'Switch replacement',
-        'Fault diagnosis',
-        'Wiring repairs',
-        'Safety upgrades',
-        'Load testing'
-      ],
-      icon: '/icons/switch.png',
-      image: img2
-    },
-    {
-      id: 'mcb-repair',
-      title: 'MCB Board Repair',
-      description: 'Expert services for MCB (Miniature Circuit Breaker) boards. We handle everything from simple repairs to complete replacements.',
-      details: [
-        'MCB replacement',
-        'Circuit breaker testing',
-        'Load balancing',
-        'Safety upgrades',
-        'Emergency repairs'
-      ],
-      icon: '/icons/mcb.png',
-      image: img3
-    },
-    {
-      id: 'fault-repair',
-      title: 'Electric Wiring Fault Repair',
-      description: 'Identification and repair of electrical wiring faults to ensure safety and prevent potential hazards.',
-      details: [
-        'Short circuit repair',
-        'Ground fault detection',
-        'Wire insulation testing',
-        'Voltage drop analysis',
-        'Complete fault diagnosis'
-      ],
-      icon: '/icons/fault.png',
-      image: img4
-    },
-    {
-      id: 'power-repair',
-      title: 'Power Board Repair',
-      description: 'Professional repair and replacement of power boards for optimal electrical distribution.',
-      details: [
-        'Power board testing',
-        'Component replacement',
-        'Wiring repairs',
-        'Safety inspections',
-        'Upgrades and modifications'
-      ],
-      icon: '/icons/power.png',
-      image: img5
-    },
-    {
-      id: 'main-repair',
-      title: 'Main Board Repair',
-      description: 'Expert services for main electrical board issues, ensuring your property has reliable power distribution.',
-      details: [
-        'Main board diagnostics',
-        'Component replacement',
-        'Load testing',
-        'Safety upgrades',
-        'Complete board replacement'
-      ],
-      icon: '/icons/main-board.png',
-      image: img6
-    },
-    {
-      id: 'remodeling',
-      title: 'Electrical Remodeling',
-      description: 'Complete electrical remodeling services for renovations and upgrades.',
-      details: [
-        'Wiring updates',
-        'Fixture relocation',
-        'Code compliance upgrades',
-        'Lighting redesign',
-        'Smart home integration'
-      ],
-      icon: '/icons/remodeling.png',
-      image: img7
-    },
-    {
-      id: 'fan-installation',
-      title: 'Fan Installation',
-      description: 'Professional installation of ceiling fans, exhaust fans, and other ventilation systems.',
-      details: [
-        'Ceiling fan installation',
-        'Exhaust fan setup',
-        'Wiring and switching',
-        'Safety testing',
-        'Remote control integration'
-      ],
-      icon: '/icons/fan.png',
-      image: img8
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -152,7 +25,7 @@ const Services = () => {
           </header>
 
           <div className="services-list">
-            {allServices.map((service) => (
+            {services.map((service) => (
               <ServiceDetails key={service.id} service={service} />
             ))}
           </div>
