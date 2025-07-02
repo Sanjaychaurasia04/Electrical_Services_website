@@ -9,24 +9,23 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-container">
         <div className="hero-content">
-          <h1>Complete Electrical Solutions You Can Trust</h1>
+          <h2>⚡ 30+ Years of Trusted Electrical Expertise</h2>
           <p>
-            With over <strong>30+ years of experience</strong> and more than <strong>15,000 successful projects</strong>, we are a leading name in electrical services across India. 
-            From <strong>residential wiring to commercial installations</strong>, we handle everything — from scratch to finish — with unmatched professionalism and care.
+            Providing complete electrical solutions for homes, offices, banks, and institutions with 15,000+ successful projects across India.
           </p>
           <p>
-            We’ve proudly delivered end-to-end electrical solutions for major banks like <strong>HDFC, Canara Bank, Axis Bank</strong>, luxurious <strong>Delhi kothis</strong>, high-end <strong>showrooms</strong>, and institutions like the <strong>CCBI Secretariat</strong>.
+            Trusted by top clients like HDFC Bank, Canara Bank, Axis Bank, Kothis, showrooms, and the CCBI Secretariat Delhi.
           </p>
           <p>
-            Our team of highly skilled electricians ensures <strong>safe, timely, and reliable service</strong> — no matter how big or small the job.
+            Serving Delhi, Noida, Gurugram, Faridabad, Jaipur, and more — with skilled professionals and guaranteed satisfaction.
           </p>
           <p>
-            We provide services in <strong>Delhi, Noida, Gurugram, Faridabad, Jaipur</strong>, and other major cities and states across India.
+            We handle all types of electrical projects — whether it's a large-scale commercial setup, a medium-sized renovation, or a small residential repair, our team delivers with the same commitment to quality, safety, and precision.
           </p>
           <div className="hero-buttons">
-            <Link to="/book-service" className="btn btn-primary">
+            {/* <Link to="/book-service" className="btn btn-primary">
               Book a Service <FaArrowRight className="icon" />
-            </Link>
+            </Link> */}
             <a href="tel:+919711117051" className="btn btn-secondary">
               <FaPhoneAlt className="icon" /> Call Now
             </a>
