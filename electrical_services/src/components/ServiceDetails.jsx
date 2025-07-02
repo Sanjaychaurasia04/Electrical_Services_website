@@ -44,7 +44,7 @@ const ServiceDetails = ({ service }) => {
             >
               Book This Service
             </Link>
-            <a href="tel:+1234567890" className="btn btn-secondary">
+            <a href="tel:+919711117051" className="btn btn-secondary">
               Call for Inquiry
             </a>
           </div>

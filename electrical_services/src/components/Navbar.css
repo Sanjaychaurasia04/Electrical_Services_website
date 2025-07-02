@@ -1,106 +1,212 @@
-/* Basic Navbar Styling */
+/* Navbar Base Styles */
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: transparent;
-  transition: all 0.3s ease;
+  left: 0;
+  right: 0;
+  background-color: rgba(44, 62, 80, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 0;
 }
 
+/* Scrolled State - When user scrolls down */
 .navbar.scrolled {
-  background-color: #1a237e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(34, 49, 63, 0.98);
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Nav Container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* Logo Styles */
 .nav-logo {
+  color: #ecf0f1;
   font-size: 1.8rem;
-  font-weight: bold;
-  color: white;
+  font-weight: 700;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .nav-logo span {
-  color: #ffca28;
+  color: #f39c12;
+  margin-right: 0.5rem;
 }
 
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links Container */
 .nav-links {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 2rem;
 }
 
+/* Individual Link Styles */
 .nav-links a {
-  color: white;
+  color: #ecf0f1;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:not(.call-btn)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.call-btn):hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
-  color: #ffca28;
+  color: #f39c12;
 }
 
-.btn-primary {
-  background-color: #ffca28;
-  color: #1a237e;
-  padding: 10px 16px;
-  border-radius: 6px;
+/* Call Button Styles */
+.call-btn {
   display: inline-flex;
   align-items: center;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s;
+  gap: 0.5rem;
+  background-color: #f39c12;
+  color: #2c3e50 !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #ffc107;
+.call-btn:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.call-btn {
-  margin-left: 10px;
+.call-btn::after {
+  display: none !important;
 }
 
+/* Mobile Toggle Button */
 .nav-toggle {
   display: none;
-  color: white;
-  font-size: 1.5rem;
   cursor: pointer;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #1a237e;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
-  }
+.nav-toggle:hover {
+  color: #f39c12;
+}
 
-  .nav-links.open {
-    max-height: 500px;
+/* Mobile Menu Styles */
+@media (max-width: 992px) {
+  .nav-container {
+    padding: 0 1.5rem;
   }
 
   .nav-toggle {
     display: block;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: #2c3e50;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .call-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  /* Scrolled state adjustments for mobile */
+  .navbar.scrolled {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Animation for menu items when opening */
+@media (max-width: 992px) {
+  .nav-links.open a {
+    animation: fadeInRight 0.5s ease forwards;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Delay each nav item animation */
+  .nav-links.open a:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links.open a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links.open a:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links.open a:nth-child(4) { animation-delay: 0.4s; }
+  .nav-links.open a:nth-child(5) { animation-delay: 0.5s; }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    max-width: 100%;
   }
 }

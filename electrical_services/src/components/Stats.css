@@ -1,44 +1,145 @@
+/* ============================
+   Stats Section - Compact & Modern
+=============================== */
 .stats {
-  background: #f4f6f9;
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  max-width: 1200px;
+.stats::before,
+.stats::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.stats::before {
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background: rgba(253, 224, 71, 0.08);
+}
+
+.stats::after {
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Container with moderate width */
+.stats .container {
+  max-width: 700px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
+/* ============================
+   Stats Grid Layout
+=============================== */
 .stats-grid {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
 }
 
+/* ============================
+   Stat Item
+=============================== */
 .stat-item {
-  text-align: center;
-  flex: 1;
-  min-width: 200px;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.stat-item:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 32px rgba(253, 224, 71, 0.25);
 }
 
 .stat-item h3 {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #1a237e;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #fde047;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.stat-item:hover h3 {
+  transform: scale(1.05);
+  color: #facc15;
 }
 
 .stat-item p {
-  font-size: 1.1rem;
-  color: #444;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  position: relative;
+  margin: 0;
+  padding-top: 0.75rem;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
+.stat-item p::before {
+  content: '';
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ============================
+   Animation
+=============================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.3s; }
+.stat-item:nth-child(3) { animation-delay: 0.5s; }
+
+/* ============================
+   Responsive Design
+=============================== */
+@media (max-width: 768px) {
+  .stats .container {
+    max-width: 90%;
+  }
+
   .stats-grid {
-    flex-direction: column;
-    gap: 30px;
+    gap: 1.2rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem 0.8rem;
   }
 
   .stat-item h3 {
@@ -46,6 +147,24 @@
   }
 
   .stat-item p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    padding: 3rem 0;
+  }
+
+  .stat-item {
+    padding: 1.2rem 0.75rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.75rem;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
   }
 }

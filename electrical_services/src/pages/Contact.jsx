@@ -155,20 +155,19 @@ const Contact = () => {
 
               <div className="info-item">
                 <h4>Phone</h4>
-                <a href="tel:+919711117051">+1 (234) 567-890</a>
-                <p>Emergency: <a href="tel:+919711117051">+1 (234) 567-891</a></p>
+                <a href="tel:+919711117051">+919711117051</a>
+                <p>Emergency: <a href="tel:+919711117051">+919711117051</a></p>
               </div>
 
               <div className="info-item">
                 <h4>Email</h4>
-                <a href="mailto:info@electricalservices.com">info@electricalservices.com</a>
+                <a href="mailto:ramjitchaurasi6@gmail.com">ramjitchaurasi6@gmail.com</a>
               </div>
 
               <div className="info-item">
                 <h4>Business Hours</h4>
                 <p>Monday–Sunday: 9:00 AM – 8:00 PM</p>
-                {/* <p>Sat: 9:00 AM – 4:00 PM</p>
-                <p>Sun: Emergency Only</p> */}
+                
               </div>
 
               <div className="map-container">

@@ -75,7 +75,7 @@ const Home = () => {
             <h2 className="cta-heading">Need Electrical Help?</h2>
             <p>Contact us today for reliable and professional electrical services.</p>
             <div className="cta-btns">
-              <a href="tel:+1234567890" className="btn btn-primary">
+              <a href="tel:+919711117051" className="btn btn-primary">
                 Call Now
               </a>
               <Link to="/contact" className="btn btn-secondary">
