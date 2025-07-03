@@ -5,7 +5,7 @@ A professional and user-friendly website for promoting and booking electrical se
 ---
 ## 🌐 Live Demo
 
-🔗 [View the Live Site on Netlify](https://electrical-services-seven.vercel.app/)
+🔗 [View the Live Site on Vercel](https://electrical-services-seven.vercel.app/)
 
 https://electrical-services-seven.vercel.app/
 
